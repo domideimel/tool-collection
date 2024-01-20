@@ -41,10 +41,12 @@ const toggleDark = useToggle(isDark);
         </NavigationMenu>
       </div>
       <div class="flex items-center gap-2">
-        <Button variant="icon" @click="toggleDark()" aria-label="Toggle dark mode">
-          <SunIcon v-if="isDark" class="h-6 w-6" />
-          <MoonIcon v-else class="h-6 w-6" />
-        </Button>
+        <ClientOnly>
+          <Button variant="icon" @click="toggleDark()" aria-label="Toggle dark mode">
+            <SunIcon v-if="isDark" class="h-6 w-6" />
+            <MoonIcon v-else class="h-6 w-6" />
+          </Button>
+        </ClientOnly>
         <Sheet>
           <SheetTrigger class="lg:hidden">
             <Bars2Icon class="h-6 w-6" />
