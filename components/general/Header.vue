@@ -11,7 +11,6 @@ import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '~/co
 import { Button } from '~/components/ui/button';
 import { MENU_ITEMS } from '~/lib/base.constants';
 import { Bars2Icon, XMarkIcon, MoonIcon, SunIcon } from '@heroicons/vue/24/outline';
-import { useDark, useToggle } from '@vueuse/core';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
@@ -42,7 +41,7 @@ const toggleDark = useToggle(isDark);
         </NavigationMenu>
       </div>
       <div class="flex items-center gap-2">
-        <Button variant="ghost" @click="toggleDark()" aria-label="Toggle dark mode">
+        <Button variant="icon" @click="toggleDark()" aria-label="Toggle dark mode">
           <SunIcon v-if="isDark" class="h-6 w-6" />
           <MoonIcon v-else class="h-6 w-6" />
         </Button>
