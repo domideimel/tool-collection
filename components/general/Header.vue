@@ -29,7 +29,7 @@ const toggleDark = useToggle(isDark);
           <NavigationMenuList>
             <NavigationMenuItem v-for="item in MENU_ITEMS">
               <NavigationMenuLink
-                exact-active-class="bg-accent/50"
+                exact-active-class="!bg-accent/50"
                 :href="item.link"
                 :as="NuxtLink"
                 :class="navigationMenuTriggerStyle()"
@@ -61,7 +61,7 @@ const toggleDark = useToggle(isDark);
               <NavigationMenuList class="flex-col items-start">
                 <NavigationMenuItem v-for="item in MENU_ITEMS" class="!m-0">
                   <NavigationMenuLink
-                    exact-active-class="bg-accent/50"
+                    exact-active-class="!bg-accent/50"
                     :href="item.link"
                     :as="NuxtLink"
                     :class="navigationMenuTriggerStyle()"
