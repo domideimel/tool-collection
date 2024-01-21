@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import Header from '~/components/general/Header.vue';
 import { Toaster } from '~/components/ui/toast';
+
+useHead({
+  titleTemplate: titleChunk => {
+    return titleChunk ? `${titleChunk} - 'Tool Collection'` : 'Tool Collection';
+  },
+});
 </script>
 <template>
   <div class="flex min-h-screen flex-col bg-background">

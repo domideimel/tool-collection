@@ -4,12 +4,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@vueuse/nuxt'],
   app: {
     head: {
-      title: 'Tool Collection',
-      titleTemplate: titleChunk => {
-        return titleChunk ? `${titleChunk} - 'Tool Collection'` : "'Tool Collection'";
-      },
       htmlAttrs: {
-        class: 'dark', // Add your default class here
+        class: 'dark',
       },
     },
   },
