@@ -9,6 +9,9 @@ import { z } from 'zod';
 import { useForm } from 'vee-validate';
 import { Slider } from '~/components/ui/slider';
 import { Checkbox } from '~/components/ui/checkbox';
+import type { PasswordMap } from '~/types/password-generator.model';
+import { useStorage } from '@vueuse/core';
+import { generatePassword } from '~/lib/password-generator/utils';
 
 useSeoMeta({
   title: 'Passwort Generator',
@@ -32,14 +35,17 @@ const checkboxItems = computed(() => [
     label: 'Kleinbuchstaben',
   },
   {
-    id: 'symbols',
+    id: 'symbol',
     label: 'Sonderzeichen',
   },
   {
-    id: 'numbers',
+    id: 'number',
     label: 'Zahlen',
   },
 ]);
+
+const state = useStorage<PasswordMap>('lastGeneratedPasswords', new Map(), window?.localStorage);
+const { copy } = useClipboard({ legacy: true });
 
 const formSchema = toTypedSchema(
   z.object({
@@ -65,7 +71,13 @@ const form = useForm({
 });
 
 const onSubmit = form.handleSubmit(values => {
-  console.log('Form submitted!', values);
+  generatedPassword.value = generatePassword({
+    lower: !!values.lowercase,
+    upper: !!values.uppercase,
+    number: !!values.numbers,
+    symbol: !!values.symbols,
+    length: values.passwordLength?.[0] ?? 6,
+  });
 });
 </script>
 
@@ -121,7 +133,7 @@ const onSubmit = form.handleSubmit(values => {
                     <div class="flex items-center space-x-2">
                       <Checkbox :id="item.id" :checked="value" @update:checked="handleChange" />
                       <label
-                        for="uppercase"
+                        :for="item.id"
                         class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                       >
                         {{ item.label }}
