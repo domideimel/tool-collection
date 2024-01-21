@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from '~/components/general/Header.vue';
+import { Toaster } from '~/components/ui/toast';
 </script>
 <template>
   <div class="flex min-h-screen flex-col bg-background">
@@ -10,4 +11,5 @@ import Header from '~/components/general/Header.vue';
       </div>
     </div>
   </div>
+  <Toaster />
 </template>
