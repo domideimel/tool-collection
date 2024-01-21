@@ -8,6 +8,9 @@ export default defineNuxtConfig({
       titleTemplate: titleChunk => {
         return titleChunk ? `${titleChunk} - 'Tool Collection'` : "'Tool Collection'";
       },
+      htmlAttrs: {
+        class: 'dark', // Add your default class here
+      },
     },
   },
 });
