@@ -31,11 +31,11 @@ const checkboxItems = computed(() => [
     label: 'Kleinbuchstaben',
   },
   {
-    id: 'symbol',
+    id: 'symbols',
     label: 'Sonderzeichen',
   },
   {
-    id: 'number',
+    id: 'numbers',
     label: 'Zahlen',
   },
 ]);
