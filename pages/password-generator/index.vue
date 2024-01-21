@@ -19,7 +19,7 @@ useSeoMeta({
       <CardContent>
         <ClientOnly>
           <template #fallback>
-            <div class="flex flex-col gap-1">
+            <div class="flex flex-col gap-4">
               <Skeleton class="h-8 w-full" v-for="_ in 10" />
             </div>
           </template>

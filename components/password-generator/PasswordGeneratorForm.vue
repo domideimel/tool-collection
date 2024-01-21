@@ -13,16 +13,14 @@ import { Slider } from '~/components/ui/slider';
 import { Checkbox } from '~/components/ui/checkbox';
 import { Button } from '~/components/ui/button';
 
-const { toast } = useToast();
-
 const generatedPassword = ref<string>('');
+
 const sliderNumber = ref<number[]>([6]);
 const uppercase = ref<boolean>(true);
 const lowercase = ref<boolean>(true);
 const symbols = ref<boolean>(true);
 const numbers = ref<boolean>(true);
 const hasCopied = ref<boolean>(false);
-
 const checkboxItems = computed(() => [
   {
     id: 'uppercase',
@@ -44,6 +42,7 @@ const checkboxItems = computed(() => [
 
 const state = useStorage<PasswordMap>('lastGeneratedPasswords', new Map(), window?.localStorage);
 const { copy } = useClipboard({ legacy: true });
+const { toast } = useToast();
 
 const formSchema = toTypedSchema(
   z.object({
@@ -94,6 +93,7 @@ const getGeneratedPassword = async () => {
     toast({
       title: 'Passwort kopiert',
       description: 'Das Passwort wurde in die Zwischenablage kopiert.',
+      duration: 3000,
     });
     hasCopied.value = true;
   } catch (e: any) {
@@ -102,6 +102,7 @@ const getGeneratedPassword = async () => {
       title: 'Es ist ein Fehler aufgetreten',
       description: e.message,
       variant: 'destructive',
+      duration: 3000,
     });
   }
 };
