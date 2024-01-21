@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/components/ui/card';
 import { Skeleton } from '~/components/ui/skeleton';
 import PasswordGeneratorForm from '~/components/password-generator/PasswordGeneratorForm.vue';
+import LastGeneratedPasswords from '~/components/password-generator/LastGeneratedPasswords.vue';
 
 useSeoMeta({
   title: 'Passwort Generator',
@@ -20,7 +21,7 @@ useSeoMeta({
         <ClientOnly>
           <template #fallback>
             <div class="flex flex-col gap-4">
-              <Skeleton class="h-8 w-full" v-for="_ in 10" />
+              <Skeleton class="h-8 w-full" v-for="_ in 9" />
             </div>
           </template>
           <PasswordGeneratorForm />
@@ -33,7 +34,14 @@ useSeoMeta({
         <CardDescription> Hier werden die zuletzt generierten Passwörter angezeigt.</CardDescription>
       </CardHeader>
       <CardContent>
-        <ClientOnly></ClientOnly>
+        <ClientOnly>
+          <template #fallback>
+            <div class="flex flex-col gap-4">
+              <Skeleton class="h-8 w-full" v-for="_ in 9" />
+            </div>
+          </template>
+          <LastGeneratedPasswords />
+        </ClientOnly>
       </CardContent>
     </Card>
   </div>

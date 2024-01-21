@@ -68,6 +68,7 @@ const form = useForm({
 });
 
 const onSubmit = form.handleSubmit(values => {
+  hasCopied.value = false;
   generatedPassword.value = generatePassword({
     lower: !!values.lowercase,
     upper: !!values.uppercase,
@@ -97,7 +98,6 @@ const getGeneratedPassword = async () => {
     });
     hasCopied.value = true;
   } catch (e: any) {
-    console.error(e);
     toast({
       title: 'Es ist ein Fehler aufgetreten',
       description: e.message,
