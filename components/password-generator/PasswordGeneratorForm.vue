@@ -157,5 +157,3 @@ const getGeneratedPassword = async () => {
     </div>
   </form>
 </template>
-
-<style scoped></style>
