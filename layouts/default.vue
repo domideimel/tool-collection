@@ -6,6 +6,9 @@ useHead({
   titleTemplate: titleChunk => {
     return titleChunk ? `${titleChunk} - 'Tool Collection'` : 'Tool Collection';
   },
+  htmlAttrs: {
+    lang: 'de',
+  },
 });
 </script>
 <template>

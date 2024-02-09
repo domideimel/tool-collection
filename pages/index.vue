@@ -4,6 +4,10 @@ import { MENU_ITEMS } from '~/lib/base.constants';
 import { Button } from '~/components/ui/button';
 import { NuxtLink } from '#components';
 
+useSeoMeta({
+  description: 'Eine Sammlung an Tools, die dir den Alltag erleichtern.',
+});
+
 const menuItems = computed(() => MENU_ITEMS.filter(item => item.link !== '/'));
 </script>
 
@@ -12,7 +16,7 @@ const menuItems = computed(() => MENU_ITEMS.filter(item => item.link !== '/'));
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
     <Card v-for="page in menuItems">
       <CardHeader>
-        <h3 class="text-2xl font-semibold leading-none tracking-tighter">{{ page.name }}</h3>
+        <h2 class="text-2xl font-semibold leading-none tracking-tighter">{{ page.name }}</h2>
       </CardHeader>
       <CardContent>
         <p v-if="page?.description">{{ page.description }}</p>
