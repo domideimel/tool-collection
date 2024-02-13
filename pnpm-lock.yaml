@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.316.0
     version: 0.316.0(vue@3.4.18)
   radix-vue:
-    specifier: ^1.4.1
-    version: 1.4.2(vue@3.4.18)
+    specifier: ^1.4.3
+    version: 1.4.3(vue@3.4.18)
   tailwind-merge:
     specifier: ^2.2.1
     version: 2.2.1
@@ -5081,8 +5081,8 @@ packages:
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
 
-  /radix-vue@1.4.2(vue@3.4.18):
-    resolution: {integrity: sha512-3eENiigXlRBduAXoFjanDmuD/p1M+KU0C2SZWyRD9Mpey8RQSZ593AshroUV4cho8UL4h398RYA6ouMWAvU4Jg==}
+  /radix-vue@1.4.3(vue@3.4.18):
+    resolution: {integrity: sha512-e0yfnxrzI899NNavSmL8nGIOK2jhP+5J7P4NhSxBtVRBxofgLExwrnR1no5epDx9gqWQdy4KkFftcWZZE7enrg==}
     dependencies:
       '@floating-ui/dom': 1.6.1
       '@floating-ui/vue': 1.0.6(vue@3.4.18)
