@@ -12,6 +12,7 @@ useHead({
 });
 </script>
 <template>
+  <VitePwaManifest />
   <div class="flex min-h-screen flex-col bg-background">
     <Header />
     <div class="flex-1 bg-background">

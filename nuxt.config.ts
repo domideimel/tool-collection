@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     },
     manifest: {
       'name': 'Toolbox',
-      'short_name': 'ToolBox',
+      'short_name': 'Toolbox',
       'theme_color': '#101014',
       'background_color': '#101014',
       'display': 'standalone',
