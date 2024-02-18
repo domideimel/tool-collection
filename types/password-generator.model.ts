@@ -1,11 +1,9 @@
-export type GenerationProperties = { lower: boolean, upper: boolean, number: boolean, symbol: boolean, length: number }
-export interface RandomFunc {
-  lower: () => string,
-  upper: () => string,
-  number: () => string,
-  symbol: () => string,
+type BooleanProperties = 'lower' | 'upper' | 'number' | 'symbol';
 
-  [index: string]: () => string,
-}
+type RandomFunction = () => string;
 
-export type PasswordMap = Map<string, string>
+export type GenerationProperties = Record<BooleanProperties, boolean> & { length: number };
+
+export interface RandomFunc extends Record<BooleanProperties, RandomFunction> {}
+
+export type PasswordMap = Map<string, string>;

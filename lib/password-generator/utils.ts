@@ -19,19 +19,9 @@ const createSymbolString = (): string[] => {
 }
 
 /**
- * Generates Random Lowercase Letter
+ * Generates Random Char
  */
-const getRandomLower = (): string => String.fromCharCode(random(97, 122))
-
-/**
- * Generates Random Uppercase Letter
- */
-const getRandomUpper = (): string => String.fromCharCode(random(65, 90))
-
-/**
- * Generates Random Number
- */
-const getRandomNumber = (): string => String.fromCharCode(random(48, 57))
+const getRandomChar = (start: number, end: number): string => String.fromCharCode(random(start, end));
 
 /**
  * Generates Random Symbol
@@ -43,9 +33,9 @@ const getRandomSymbol = (symbols: string [] = createSymbolString()): string => s
  */
 
 const randomFunc: RandomFunc = {
-  lower: getRandomLower,
-  upper: getRandomUpper,
-  number: getRandomNumber,
+  lower: () => getRandomChar(97, 122),
+  upper: () => getRandomChar(65, 90),
+  number: () => getRandomChar(48, 57),
   symbol: getRandomSymbol
 }
 
@@ -62,5 +52,5 @@ const generatePassword = ({ length, ...args }: GenerationProperties): string => 
 }
 
 export {
-  getRandomLower, getRandomNumber, getRandomSymbol, getRandomUpper, generatePassword
+   getRandomSymbol, generatePassword
 }
