@@ -1,9 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@vueuse/nuxt', '@vite-pwa/nuxt'],
-  experimental: {
-    appManifest: true,
-  },
   app: {
     head: {
       htmlAttrs: {
@@ -12,6 +9,7 @@ export default defineNuxtConfig({
     },
   },
   pwa: {
+    strategies: 'generateSW',
     registerType: 'autoUpdate',
     devOptions: {
       enabled: true,
@@ -21,6 +19,12 @@ export default defineNuxtConfig({
     workbox: {
       globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
     },
+    injectManifest: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+    },
+    client: {
+      installPrompt: true,
+    },
     manifest: {
       name: 'Toolbox',
       short_name: 'Toolbox',
@@ -28,7 +32,6 @@ export default defineNuxtConfig({
       background_color: '#101014',
       display: 'standalone',
       orientation: 'portrait',
-      start_url: '/',
       icons: [
         {
           src: 'android-chrome-192x192.png',
@@ -39,6 +42,12 @@ export default defineNuxtConfig({
           src: 'android-chrome-512x512.png',
           type: 'image/png',
           sizes: '512x512',
+        },
+        {
+          src: 'android-chrome-512x512.png',
+          type: 'image/png',
+          sizes: '512x512',
+          purpose: 'any maskable',
         },
       ],
     },
