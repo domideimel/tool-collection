@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
     "@types/lodash-es": "^4.17.12",
+    "@vite-pwa/nuxt": "^0.5.0",
     "nuxt": "^3.10.1",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
