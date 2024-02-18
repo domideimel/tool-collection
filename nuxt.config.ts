@@ -19,7 +19,6 @@ export default defineNuxtConfig({
       'background_color': '#101014',
       'display': 'standalone',
       'orientation': 'portrait',
-      'scope': '/',
       'start_url': '/',
       'icons': [{
         'src': 'android-chrome-192x192.png',
