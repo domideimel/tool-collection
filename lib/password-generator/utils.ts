@@ -1,31 +1,25 @@
-import { isEmpty, omitBy, random, sample } from 'lodash-es';
+import { isEmpty, omitBy, random, sample, range } from 'lodash-es';
 import type { GenerationProperties, RandomFunc } from '~/types/password-generator.model';
-
-/**
- * Create an array and fill it with a range of numbers
- */
-const range = (start: number, end: number): number[] => {
-  return Array(end - start + 1)
-    .fill(null)
-    .map((_, idx) => start + idx);
-};
 
 /**
  * Create a string of special Chars
  */
+
 const createSymbolString = (): string[] => {
-  const asciiCharsRanges: number[] = [...range(33, 47), ...range(58, 64), ...range(91, 96), ...range(123, 126)];
+  const asciiCharsRanges: number[] = [...range(33, 48), ...range(58, 65), ...range(91, 97), ...range(123, 127)];
   return asciiCharsRanges.map(char => String.fromCharCode(char));
 };
 
 /**
  * Generates Random Char
  */
+
 const getRandomChar = (start: number, end: number): string => String.fromCharCode(random(start, end));
 
 /**
  * Generates Random Symbol
  */
+
 const getRandomSymbol = (symbols: string[] = createSymbolString()): string => symbols[random(0, symbols.length - 1)];
 
 /**
