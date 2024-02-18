@@ -34,13 +34,12 @@ const randomFunc: RandomFunc = {
 };
 
 const generatePassword = ({ length, ...args }: GenerationProperties): string => {
-  type FilteredTypes = Omit<GenerationProperties, 'length'>;
-  const filteredTypes = omitBy<FilteredTypes>(args, value => !Boolean(value));
+  const filteredTypes = omitBy(args, value => !Boolean(value));
   if (isEmpty(filteredTypes)) return '';
-  const typesArray = Object.entries(filteredTypes as FilteredTypes);
+  const typesArray = Object.entries(filteredTypes);
 
   return Array.from({ length }, () => {
-    const [type] = sample(typesArray) as [keyof FilteredTypes, boolean];
+    const [type] = sample(typesArray) as [keyof typeof filteredTypes, boolean];
     return randomFunc[type as keyof RandomFunc]();
   }).join('');
 };
