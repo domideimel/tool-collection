@@ -27,8 +27,8 @@ dependencies:
     specifier: ^4.17.21
     version: 4.17.21
   lucide-vue-next:
-    specifier: ^0.330.0
-    version: 0.330.0(vue@3.4.18)
+    specifier: ^0.331.0
+    version: 0.331.0(vue@3.4.18)
   radix-vue:
     specifier: ^1.4.3
     version: 1.4.3(vue@3.4.18)
@@ -4392,7 +4392,7 @@ packages:
       function-bind: 1.1.2
       has-proto: 1.0.1
       has-symbols: 1.0.3
-      hasown: 2.0.0
+      hasown: 2.0.1
     dev: true
 
   /get-own-enumerable-property-symbols@3.0.2:
@@ -4755,7 +4755,7 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       es-errors: 1.3.0
-      hasown: 2.0.0
+      hasown: 2.0.1
       side-channel: 1.0.5
     dev: true
 
@@ -5291,8 +5291,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-vue-next@0.330.0(vue@3.4.18):
-    resolution: {integrity: sha512-/rfVjXHSTLzhYhRYxkZlazBpE2Xp0p9rfCg9rgvsJQvNU0JCB6z6q8+TVG6j8WREi6daxGT6DbAFh0F65tyJzw==}
+  /lucide-vue-next@0.331.0(vue@3.4.18):
+    resolution: {integrity: sha512-xMEmEdyuYKVxTwCI94adtWOmjmsG9UZBlEVqJnorxJy8QTBq68ZC5zADXRHN1gehvVaYj9g+H1vdwdVEo3uj7w==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
