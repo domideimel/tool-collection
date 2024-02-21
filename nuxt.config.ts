@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@vueuse/nuxt', '@vite-pwa/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@vueuse/nuxt', '@vite-pwa/nuxt', '@nuxtjs/i18n'],
   app: {
     head: {
       htmlAttrs: {
@@ -8,8 +8,32 @@ export default defineNuxtConfig({
       },
     },
   },
+  i18n: {
+    langDir: 'lang',
+    baseUrl: 'https://tool-box.netlify.app',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en',
+        name: 'English',
+        file: 'en.ts',
+      },
+      {
+        code: 'de',
+        iso: 'de',
+        name: 'Deutsch',
+        file: 'de.ts',
+      }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      cookieCrossOrigin: false,
+      redirectOn: 'root',
+      alwaysRedirect: true,
+    },
+  },
   pwa: {
-    strategies: 'generateSW',
     registerType: 'autoUpdate',
     devOptions: {
       enabled: true,

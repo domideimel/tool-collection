@@ -3,12 +3,18 @@ import Header from '~/components/general/Header.vue';
 import { Toaster } from '~/components/ui/toast';
 import Update from '~/components/service-worker/update.vue'
 
+const i18nHead = useLocaleHead({
+  addSeoAttributes: {
+    canonicalQueries: ['foo']
+  }
+})
+
 useHead({
   titleTemplate: titleChunk => {
     return titleChunk ? `${titleChunk} - 'Tool Collection'` : 'Tool Collection';
   },
   htmlAttrs: {
-    lang: 'de',
+    lang: i18nHead.value.htmlAttrs!.lang
   },
 });
 </script>

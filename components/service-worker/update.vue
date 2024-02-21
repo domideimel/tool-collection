@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ToastAction, useToast } from '~/components/ui/toast'
+import { ToastAction, useToast } from '~/components/ui/toast';
+const { toast } = useToast();
 
 const { $pwa } = useNuxtApp();
 
-const { toast } = useToast();
 onMounted(() => {
   if ($pwa?.offlineReady) {
     toast({
@@ -17,11 +17,15 @@ onMounted(() => {
     toast({
       title: 'Neuer Inhalt verfügbar',
       description: 'Klicken Sie auf die Schaltfläche zum Aktualisieren.',
-      action: h(ToastAction, {
-        altText: 'Aktualisieren',
-      }, {
-        default: $pwa?.updateServiceWorker(),
-      }),
+      action: h(
+        ToastAction,
+        {
+          altText: 'Aktualisieren',
+        },
+        {
+          default: $pwa?.updateServiceWorker(),
+        },
+      ),
     });
   }
 });

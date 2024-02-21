@@ -3,10 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '~/com
 import { Skeleton } from '~/components/ui/skeleton';
 import PasswordGeneratorForm from '~/components/password-generator/PasswordGeneratorForm.vue';
 import LastGeneratedPasswords from '~/components/password-generator/LastGeneratedPasswords.vue';
-
+const { t } = useI18n();
 useSeoMeta({
-  title: 'Passwort Generator',
-  description: 'Hier können custom Passwörter in beliebiger Länge generiert werden lassen.',
+  title: t('passwordGenerator.title'),
+  description: t('passwordGenerator.seoDescription'),
 });
 </script>
 
@@ -14,7 +14,7 @@ useSeoMeta({
   <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-12">
     <Card>
       <CardHeader>
-        <CardTitle> Password Generator</CardTitle>
+        <CardTitle>{{t('passwordGenerator.title')}}r</CardTitle>
         <CardDescription> Hier können custom Passwörter in beliebiger Länge generiert werden lassen.</CardDescription>
       </CardHeader>
       <CardContent>
