@@ -1,17 +1,19 @@
 <script setup lang="ts">
-import { useToast } from '~/components/ui/toast';
-import { useStorage } from '@vueuse/core';
-import type { PasswordMap } from '~/types/password-generator.model';
-import { toTypedSchema } from '@vee-validate/zod';
-import { z } from 'zod';
-import { useForm } from 'vee-validate';
-import { generatePassword } from '~/lib/password-generator/utils';
-import { PASSWORD_CACHE_LENGTH } from '~/lib/password-generator/pw-gen.constants';
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '~/components/ui/form';
-import { Input } from '~/components/ui/input';
-import { Slider } from '~/components/ui/slider';
-import { Checkbox } from '~/components/ui/checkbox';
-import { Button } from '~/components/ui/button';
+import { useToast } from '~/components/ui/toast'
+import { useStorage } from '@vueuse/core'
+import type { PasswordMap } from '~/types/password-generator.model'
+import { toTypedSchema } from '@vee-validate/zod'
+import { z } from 'zod'
+import { useForm } from 'vee-validate'
+import { generatePassword } from '~/lib/password-generator/utils'
+import { PASSWORD_CACHE_LENGTH } from '~/lib/password-generator/pw-gen.constants'
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '~/components/ui/form'
+import { Input } from '~/components/ui/input'
+import { Slider } from '~/components/ui/slider'
+import { Checkbox } from '~/components/ui/checkbox'
+import { Button } from '~/components/ui/button'
+
+const { t } = useI18n();
 
 const generatedPassword = ref<string>('');
 
@@ -24,19 +26,19 @@ const hasCopied = ref<boolean>(false);
 const checkboxItems = computed(() => [
   {
     id: 'uppercase',
-    label: 'Großbuchstaben',
+    label: t('passwordGenerator.uppercase'),
   },
   {
     id: 'lowercase',
-    label: 'Kleinbuchstaben',
+    label: t('passwordGenerator.lowercase'),
   },
   {
     id: 'symbols',
-    label: 'Sonderzeichen',
+    label: t('passwordGenerator.symbols'),
   },
   {
     id: 'numbers',
-    label: 'Zahlen',
+    label: t('passwordGenerator.numbers'),
   },
 ]);
 
@@ -81,10 +83,10 @@ const onSubmit = form.handleSubmit(values => {
 const getGeneratedPassword = async () => {
   try {
     if (!generatedPassword.value.length) {
-      throw new Error('Es wurde noch kein Passwort generiert.');
+      throw new Error(t('passwordGenerator.not_generated'));
     }
     if (hasCopied.value) {
-      throw new Error('Das Passwort wurde bereits kopiert.');
+      throw new Error(t('passwordGenerator.copied_error');
     }
     if (state.value.size >= PASSWORD_CACHE_LENGTH) {
       state.value.delete(state.value.keys().next().value);
@@ -92,14 +94,14 @@ const getGeneratedPassword = async () => {
     await copy(generatedPassword.value);
     state.value.set(generatedPassword.value, generatedPassword.value);
     toast({
-      title: 'Passwort kopiert',
-      description: 'Das Passwort wurde in die Zwischenablage kopiert.',
+      title: t('passwordGenerator.copied'),
+      description: t('passwordGenerator.copied_success'),
       duration: 3000,
     });
     hasCopied.value = true;
   } catch (e: any) {
     toast({
-      title: 'Es ist ein Fehler aufgetreten',
+      title: t('error'),
       description: e.message,
       variant: 'destructive',
       duration: 3000,
@@ -113,12 +115,12 @@ const getGeneratedPassword = async () => {
     <div class="flex flex-col gap-8">
       <FormField v-slot="{ componentField }" name="password">
         <FormItem>
-          <FormLabel>Passwort</FormLabel>
+          <FormLabel>{{ $t('passwordGenerator.placeholder') }}</FormLabel>
           <FormControl>
             <div class="flex gap-1">
               <Input disabled type="text" :value="generatedPassword" placeholder="Password" v-bind="componentField" />
               <Button type="button" @click="getGeneratedPassword" :disabled="!generatedPassword.length || hasCopied">
-                Kopieren
+                {{ $t('passwordGenerator.copy') }}
               </Button>
             </div>
           </FormControl>
@@ -127,7 +129,7 @@ const getGeneratedPassword = async () => {
       </FormField>
       <FormField v-slot="{ value, handleChange }" name="passwordLength">
         <FormItem>
-          <FormLabel>Passwortlänge</FormLabel>
+          <FormLabel>{{ $t('passwordGenerator.pw_length') }}</FormLabel>
           <FormControl>
             <div class="flex gap-4">
               <Slider :default-value="[6]" :max="100" :model-value="value" @update:modelValue="handleChange" />
@@ -153,7 +155,7 @@ const getGeneratedPassword = async () => {
           <FormMessage />
         </FormItem>
       </FormField>
-      <Button type="submit" size="sm" class="w-full">Passwort generieren</Button>
+      <Button class="w-full" size="sm" type="submit">{{ $t('passwordGenerator.generate') }}</Button>
     </div>
   </form>
 </template>

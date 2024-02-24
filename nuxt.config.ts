@@ -11,47 +11,41 @@ export default defineNuxtConfig({
   i18n: {
     langDir: 'lang',
     baseUrl: 'https://tool-box.netlify.app',
+    strategy: 'no_prefix',
+    lazy: true,
     locales: [
       {
+        code: 'de',
+        iso: 'de-DE',
+        name: 'Deutsch',
+        file: 'de.ts',
+      },
+      {
         code: 'en',
-        iso: 'en',
+        iso: 'en-US',
         name: 'English',
         file: 'en.ts',
       },
-      {
-        code: 'de',
-        iso: 'de',
-        name: 'Deutsch',
-        file: 'de.ts',
-      }
     ],
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      cookieCrossOrigin: false,
-      redirectOn: 'root',
-      alwaysRedirect: true,
-    },
   },
   pwa: {
     registerType: 'autoUpdate',
+    workbox: {
+      globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+    },
     devOptions: {
       enabled: true,
     },
-    injectRegister: 'auto',
+    registerWebManifestInRouteRules: true,
     includeAssets: ['favicon.ico', 'robots.txt', 'android-chrome-192x192.png', 'android-chrome-512x512.png'],
-    workbox: {
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-    },
-    injectManifest: {
-      globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
-    },
     client: {
       installPrompt: true,
     },
     manifest: {
       name: 'Toolbox',
       short_name: 'Toolbox',
+      description:
+        'Discover our extensive collection of tools designed to make your everyday life easier. From productivity to organization - find exactly what you need to work more efficiently and achieve more.',
       theme_color: '#101014',
       background_color: '#101014',
       display: 'standalone',

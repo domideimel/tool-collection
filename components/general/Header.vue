@@ -10,7 +10,7 @@ import { NuxtLinkLocale } from '#components';
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '~/components/ui/sheet';
 import { Button } from '~/components/ui/button';
 import { MENU_ITEMS } from '~/lib/base.constants';
-import { Bars2Icon, XMarkIcon, MoonIcon, SunIcon, GlobeEuropeAfricaIcon } from '@heroicons/vue/24/outline';
+import { Bars2Icon, GlobeEuropeAfricaIcon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/vue/24/outline';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,8 +20,6 @@ import {
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
-
-console.log(MENU_ITEMS)
 
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
@@ -49,7 +47,9 @@ const availableLocales = computed(() => {
                 :as="NuxtLinkLocale"
                 :class="navigationMenuTriggerStyle()"
               >
-                {{ item.name }}
+                <ClientOnly>
+                  <span>{{ $t(item.name) }}</span>
+                </ClientOnly>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -62,16 +62,16 @@ const availableLocales = computed(() => {
             <MoonIcon v-else class="size-6" />
           </Button>
         </ClientOnly>
-        <ClientOnly>
+        <ClientOnly v-if="availableLocales.length">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <GlobeEuropeAfricaIcon class="size-6" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuLabel v-for="locale in availableLocales" :key="locale.code">
-                <Button variant="link" :as="NuxtLinkLocale" :to="switchLocalePath(locale.code)">{{
-                  locale.name
-                }}</Button>
+                <Button :as="NuxtLinkLocale" :to="switchLocalePath(locale.code)" variant="link"
+                  >{{ locale.name }}
+                </Button>
               </DropdownMenuLabel>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -98,7 +98,7 @@ const availableLocales = computed(() => {
                     :class="navigationMenuTriggerStyle()"
                   >
                     <SheetClose>
-                      {{ item.name }}
+                      {{ $t(item.name) }}
                     </SheetClose>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
