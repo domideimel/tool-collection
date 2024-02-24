@@ -6,57 +6,86 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '~/components/ui/navigation-menu';
-import { NuxtLink } from '#components';
+import { NuxtLink, NuxtLinkLocale } from '#components';
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '~/components/ui/sheet';
 import { Button } from '~/components/ui/button';
 import { MENU_ITEMS } from '~/lib/base.constants';
-import { Bars2Icon, XMarkIcon, MoonIcon, SunIcon } from '@heroicons/vue/24/outline';
+import { Bars2Icon, GlobeEuropeAfricaIcon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/vue/24/outline';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
+
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+
+const availableLocales = computed(() => {
+  return locales.value.filter(i => i.code !== locale.value);
+});
 </script>
 
 <template>
   <header class="sticky top-0 z-40 border-b border-border bg-background/80 backdrop-blur-lg">
     <div class="container flex h-14 items-center justify-between">
       <div class="flex items-center gap-2">
-        <NuxtLink to="/">
+        <NuxtLinkLocale to="/">
           <span class="flex items-center gap-1 text-2xl font-bold">
             <span>Toolbox</span>
           </span>
-        </NuxtLink>
+        </NuxtLinkLocale>
         <NavigationMenu class="hidden lg:flex">
           <NavigationMenuList>
             <NavigationMenuItem v-for="item in MENU_ITEMS">
               <NavigationMenuLink
                 exact-active-class="!bg-accent/50"
                 :href="item.link"
-                :as="NuxtLink"
+                :as="NuxtLinkLocale"
                 :class="navigationMenuTriggerStyle()"
               >
-                {{ item.name }}
+                <ClientOnly>
+                  <span>{{ $t(item.name) }}</span>
+                </ClientOnly>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 md:gap-4">
         <ClientOnly>
-          <Button variant="icon" @click="toggleDark()" aria-label="Toggle dark mode">
-            <SunIcon v-if="isDark" class="h-6 w-6" />
-            <MoonIcon v-else class="h-6 w-6" />
+          <Button variant="ghost" class="p-0" @click="toggleDark()" aria-label="Toggle dark mode">
+            <SunIcon v-if="isDark" class="size-6" />
+            <MoonIcon v-else class="size-6" />
           </Button>
+        </ClientOnly>
+        <ClientOnly v-if="availableLocales.length">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <GlobeEuropeAfricaIcon class="size-6" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel v-for="locale in availableLocales" :key="locale.code">
+                <Button :as="NuxtLink" :to="switchLocalePath(locale.code)" variant="link">
+                  {{ locale.name }}
+                </Button>
+              </DropdownMenuLabel>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </ClientOnly>
         <Sheet>
           <SheetTrigger class="lg:hidden">
-            <Bars2Icon class="h-6 w-6" />
+            <Bars2Icon class="size-6" />
           </SheetTrigger>
           <SheetContent hide-default class="w-[400px] sm:w-[540px]">
             <SheetHeader class="items-end">
               <SheetTitle class="sr-only">Mobile Menu</SheetTitle>
               <SheetDescription class="sr-only">Mobile Menu</SheetDescription>
               <SheetClose>
-                <XMarkIcon class="h-6 w-6" />
+                <XMarkIcon class="size-6" />
               </SheetClose>
             </SheetHeader>
             <NavigationMenu orientation="vertical">
@@ -65,11 +94,11 @@ const toggleDark = useToggle(isDark);
                   <NavigationMenuLink
                     exact-active-class="!bg-accent/50"
                     :href="item.link"
-                    :as="NuxtLink"
+                    :as="NuxtLinkLocale"
                     :class="navigationMenuTriggerStyle()"
                   >
                     <SheetClose>
-                      {{ item.name }}
+                      {{ $t(item.name) }}
                     </SheetClose>
                   </NavigationMenuLink>
                 </NavigationMenuItem>

@@ -9,18 +9,20 @@ const state = useStorage<PasswordMap>('lastGeneratedPasswords', new Map(), windo
 const { copy } = useClipboard({ legacy: true });
 const { toast } = useToast();
 
+const { t } = useI18n();
+
 const getLastGeneratedPassword = async (password: string) => {
   try {
     await copy(password);
     toast({
-      title: 'Passwort kopiert',
-      description: 'Das Passwort wurde in die Zwischenablage kopiert.',
+      title: t('passwordGenerator.copied'),
+      description: t('passwordGenerator.copied_success'),
       duration: 3000,
     });
   } catch (e) {
     toast({
-      title: 'Es ist ein Fehler aufgetreten',
-      description: 'Das Passwort konnte nicht in die Zwischenablage kopiert werden.',
+      title: t('error'),
+      description: t('passwordGenerator.not_copied_error'),
       variant: 'destructive',
       duration: 3000,
     });
