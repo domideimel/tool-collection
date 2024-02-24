@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { useToast } from '~/components/ui/toast'
-import { useStorage } from '@vueuse/core'
-import type { PasswordMap } from '~/types/password-generator.model'
-import { toTypedSchema } from '@vee-validate/zod'
-import { z } from 'zod'
-import { useForm } from 'vee-validate'
-import { generatePassword } from '~/lib/password-generator/utils'
-import { PASSWORD_CACHE_LENGTH } from '~/lib/password-generator/pw-gen.constants'
-import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '~/components/ui/form'
-import { Input } from '~/components/ui/input'
-import { Slider } from '~/components/ui/slider'
-import { Checkbox } from '~/components/ui/checkbox'
-import { Button } from '~/components/ui/button'
+import { useToast } from '~/components/ui/toast';
+import { useStorage } from '@vueuse/core';
+import type { PasswordMap } from '~/types/password-generator.model';
+import { toTypedSchema } from '@vee-validate/zod';
+import { z } from 'zod';
+import { useForm } from 'vee-validate';
+import { generatePassword } from '~/lib/password-generator/utils';
+import { PASSWORD_CACHE_LENGTH } from '~/lib/password-generator/pw-gen.constants';
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '~/components/ui/form';
+import { Input } from '~/components/ui/input';
+import { Slider } from '~/components/ui/slider';
+import { Checkbox } from '~/components/ui/checkbox';
+import { Button } from '~/components/ui/button';
 
 const { t } = useI18n();
 
@@ -83,10 +83,10 @@ const onSubmit = form.handleSubmit(values => {
 const getGeneratedPassword = async () => {
   try {
     if (!generatedPassword.value.length) {
-      throw new Error(t('passwordGenerator.not_generated'));
+      new Error(t('passwordGenerator.notgenerated'));
     }
     if (hasCopied.value) {
-      throw new Error(t('passwordGenerator.copied_error');
+      new Error(t('passwordGenerator.copied_error'));
     }
     if (state.value.size >= PASSWORD_CACHE_LENGTH) {
       state.value.delete(state.value.keys().next().value);
