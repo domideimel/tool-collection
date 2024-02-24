@@ -21,7 +21,7 @@ import {
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
-const navItems = computed(() => MENU_ITEMS.filter(i => i?.showInNav));
+const navItems = computed(() => MENU_ITEMS.filter(i => i.showInNav));
 
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();

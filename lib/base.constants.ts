@@ -2,13 +2,14 @@ type MenuItem = {
   link: string;
   name: string;
   description?: string;
-  showInNav?: boolean;
+  showInNav: boolean;
 };
 
 export const MENU_ITEMS: MenuItem[] = [
   {
     link: '/',
     name: 'home.title',
+    showInNav: false,
   },
   {
     link: 'password-generator',
