@@ -10,25 +10,13 @@ export default defineNuxtConfig({
   },
   i18n: {
     langDir: 'lang',
-    strategy: 'prefix',
     defaultLocale: 'en',
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-    },
     locales: [
       {
         code: 'en',
         iso: 'en-US',
         name: 'English',
         file: 'en.ts',
-        isCatchallLocale: true,
-      },
-      {
-        code: 'de',
-        iso: 'de-DE',
-        name: 'Deutsch',
-        file: 'de.ts',
       },
     ],
   },
