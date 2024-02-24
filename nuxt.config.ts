@@ -18,6 +18,12 @@ export default defineNuxtConfig({
         name: 'English',
         file: 'en.ts',
       },
+      {
+        code: 'de',
+        iso: 'de-DE',
+        name: 'Deutsch',
+        file: 'de.ts',
+      },
     ],
   },
   pwa: {
