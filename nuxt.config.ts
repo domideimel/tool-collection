@@ -10,21 +10,25 @@ export default defineNuxtConfig({
   },
   i18n: {
     langDir: 'lang',
-    baseUrl: 'https://tool-box.netlify.app',
-    strategy: 'no_prefix',
-    lazy: true,
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root', // recommended
+    },
     locales: [
-      {
-        code: 'de',
-        iso: 'de-DE',
-        name: 'Deutsch',
-        file: 'de.ts',
-      },
       {
         code: 'en',
         iso: 'en-US',
         name: 'English',
         file: 'en.ts',
+        isCatchallLocale: true,
+      },
+      {
+        code: 'de',
+        iso: 'de-DE',
+        name: 'Deutsch',
+        file: 'de.ts',
       },
     ],
   },
@@ -38,9 +42,6 @@ export default defineNuxtConfig({
     },
     registerWebManifestInRouteRules: true,
     includeAssets: ['favicon.ico', 'robots.txt', 'android-chrome-192x192.png', 'android-chrome-512x512.png'],
-    client: {
-      installPrompt: true,
-    },
     manifest: {
       name: 'Toolbox',
       short_name: 'Toolbox',

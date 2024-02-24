@@ -6,7 +6,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '~/components/ui/navigation-menu';
-import { NuxtLinkLocale } from '#components';
+import { NuxtLink, NuxtLinkLocale } from '#components';
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from '~/components/ui/sheet';
 import { Button } from '~/components/ui/button';
 import { MENU_ITEMS } from '~/lib/base.constants';
@@ -69,8 +69,8 @@ const availableLocales = computed(() => {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuLabel v-for="locale in availableLocales" :key="locale.code">
-                <Button :as="NuxtLinkLocale" :to="switchLocalePath(locale.code)" variant="link"
-                  >{{ locale.name }}
+                <Button :as="NuxtLink" :to="switchLocalePath(locale.code)" variant="link">
+                  {{ locale.name }}
                 </Button>
               </DropdownMenuLabel>
             </DropdownMenuContent>
