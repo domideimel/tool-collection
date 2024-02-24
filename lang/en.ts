@@ -30,4 +30,10 @@ export default {
     not_copied_error: 'The password could not be copied.',
     not_generated_error: 'No password has been generated yet.',
   },
+  redirectGenerator: {
+    title: 'Redirect Generator',
+    description:
+      'Create redirects for your URLs and links. Generate short, custom URLs that are easy to remember and share. With our redirect generator, you can transform long, complex URLs into short, user-friendly links.',
+    seoDescription: 'Create Custom Redirects for Your URLs and Links - Fast and Easy!',
+  },
 };

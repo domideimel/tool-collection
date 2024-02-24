@@ -16,13 +16,15 @@ const menuItems = computed(() => MENU_ITEMS.filter(item => item.link !== '/'));
 <template>
   <h1 class="mb-4 text-2xl lg:mb-8 lg:text-4xl">{{ $t('home.h1') }}</h1>
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-    <Card v-for="page in menuItems">
-      <CardHeader>
-        <h2 class="text-2xl font-semibold leading-none tracking-tighter">{{ $t(page.name) }}</h2>
-      </CardHeader>
-      <CardContent>
-        <p v-if="page?.description">{{ $t(page.description) }}</p>
-      </CardContent>
+    <Card v-for="page in menuItems" class="flex flex-col justify-between">
+      <div>
+        <CardHeader>
+          <h2 class="text-2xl font-semibold leading-none tracking-tighter">{{ $t(page.name) }}</h2>
+        </CardHeader>
+        <CardContent>
+          <p v-if="page?.description">{{ $t(page.description) }}</p>
+        </CardContent>
+      </div>
       <CardFooter>
         <Button :as="NuxtLinkLocale" :to="page.link" class="w-full" size="sm">{{ $t('toLink') }}</Button>
       </CardFooter>
