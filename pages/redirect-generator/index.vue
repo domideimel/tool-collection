@@ -1,13 +1,16 @@
 <script lang="ts" setup>
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/components/ui/table';
-import { toTypedSchema } from '@vee-validate/zod';
-import { useForm } from 'vee-validate';
-import * as z from 'zod';
-import { FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form';
-import { Input } from '~/components/ui/input';
-import { Button } from '~/components/ui/button';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/components/ui/table'
+import { toTypedSchema } from '@vee-validate/zod'
+import { useForm } from 'vee-validate'
+import * as z from 'zod'
+import { FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form'
+import { Input } from '~/components/ui/input'
+import { Button } from '~/components/ui/button'
+import { $fetch } from 'ofetch'
+import Results from '~/components/redirect-generator/results.vue'
 
 const rows = ref([0]);
+const redirectStrings = ref<string[]>([);
 
 const { t } = useI18n();
 
@@ -18,7 +21,6 @@ useSeoMeta({
 
 function createFormSchema(rows: number) {
   let fields: Record<string, z.ZodType<any, any>> = {};
-  console.log('rows', rows);
 
   for (let i = 0; i < rows; i++) {
     fields[`oldUrl_${i}`] = z.string().url();
@@ -28,7 +30,7 @@ function createFormSchema(rows: number) {
   return z.object(fields);
 }
 
-let formSchema = ref(toTypedSchema(createFormSchema(rows.value.length)));
+const formSchema = ref(toTypedSchema(createFormSchema(rows.value.length)))
 
 watchArray(
   rows,
@@ -42,8 +44,13 @@ const form = useForm({
   validationSchema: formSchema,
 });
 
-const onSubmit = form.handleSubmit(values => {
-  console.log('Form submitted!', JSON.stringify(values));
+const onSubmit = form.handleSubmit(async values => {
+  const { redirects } = await $fetch<Record<'redirects', string[]>>('api/generate-redirects', {
+    method: 'POST',
+    body: JSON.stringify(values),
+  })
+
+  redirectStrings.value = redirects
 });
 
 const addRow = (index: number) => {
@@ -105,4 +112,12 @@ const removeRow = (index: number) => {
     </Table>
     <Button type="submit">{{ $t('redirectGenerator.form.submit') }}</Button>
   </form>
+  <hr v-if="redirectStrings.length" class="my-4" />
+  <div v-if="redirectStrings.length" class="mt-4">
+    <ul class="grid gap-y-2">
+      <li v-for="redirect in redirectStrings" :key="redirect">
+        <Results :redirect="redirect" />
+      </li>
+    </ul>
+  </div>
 </template>

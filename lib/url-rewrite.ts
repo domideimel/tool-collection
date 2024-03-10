@@ -14,14 +14,14 @@ export const generateRewrites = (oldUrl: string, newUrl: string, is301: boolean 
 
     if (!query.length) {
       return `RewriteCond %{HTTP_HOST} ${host}$
-        RewriteCond %{REQUEST_URI} ^${path}$
-        RewriteRule .* RewriteRule .* ${newUrl} [NE,R=${statusCode},L]`;
+RewriteCond %{REQUEST_URI} ^${path}$
+RewriteRule .* RewriteRule .* ${newUrl} [NE,R=${statusCode},L]`;
     }
 
     return `RewriteCond %{HTTP_HOST} ${host}$
-      RewriteCond %{QUERY_STRING} ^${query}$
-      RewriteCond %{REQUEST_URI} ^${path}$
-      RewriteRule .* RewriteRule .* ${newUrl} [NE,R=${statusCode},L]`;
+RewriteCond %{QUERY_STRING} ^${query}$
+RewriteCond %{REQUEST_URI} ^${path}$
+RewriteRule .* RewriteRule .* ${newUrl} [NE,R=${statusCode},L]`;
   } catch (error: any) {
     return error.message;
   }
