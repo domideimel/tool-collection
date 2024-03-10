@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/components/ui/table'
-import { toTypedSchema } from '@vee-validate/zod'
-import { useForm } from 'vee-validate'
-import * as z from 'zod'
-import { FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form'
-import { Input } from '~/components/ui/input'
-import { Button } from '~/components/ui/button'
-import { $fetch } from 'ofetch'
-import Results from '~/components/redirect-generator/results.vue'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '~/components/ui/table';
+import { toTypedSchema } from '@vee-validate/zod';
+import { useForm } from 'vee-validate';
+import * as z from 'zod';
+import { FormControl, FormField, FormItem, FormMessage } from '~/components/ui/form';
+import { Input } from '~/components/ui/input';
+import { Button } from '~/components/ui/button';
+import { $fetch } from 'ofetch';
+import Results from '~/components/redirect-generator/results.vue';
 
 const rows = ref([0]);
-const redirectStrings = ref<string[]>([);
+const redirectStrings = ref<string[]>([]);
 
 const { t } = useI18n();
 
@@ -30,7 +30,7 @@ function createFormSchema(rows: number) {
   return z.object(fields);
 }
 
-const formSchema = ref(toTypedSchema(createFormSchema(rows.value.length)))
+const formSchema = ref(toTypedSchema(createFormSchema(rows.value.length)));
 
 watchArray(
   rows,
@@ -48,9 +48,9 @@ const onSubmit = form.handleSubmit(async values => {
   const { redirects } = await $fetch<Record<'redirects', string[]>>('api/generate-redirects', {
     method: 'POST',
     body: JSON.stringify(values),
-  })
+  });
 
-  redirectStrings.value = redirects
+  redirectStrings.value = redirects;
 });
 
 const addRow = (index: number) => {
