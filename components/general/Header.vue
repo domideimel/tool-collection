@@ -21,6 +21,8 @@ import {
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
+const navItems = computed(() => MENU_ITEMS.filter(i => i.showInNav));
+
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
 
@@ -40,7 +42,7 @@ const availableLocales = computed(() => {
         </NuxtLinkLocale>
         <NavigationMenu class="hidden lg:flex">
           <NavigationMenuList>
-            <NavigationMenuItem v-for="item in MENU_ITEMS">
+            <NavigationMenuItem v-for="item in navItems">
               <NavigationMenuLink
                 exact-active-class="!bg-accent/50"
                 :href="item.link"
@@ -90,7 +92,7 @@ const availableLocales = computed(() => {
             </SheetHeader>
             <NavigationMenu orientation="vertical">
               <NavigationMenuList class="flex-col items-start">
-                <NavigationMenuItem v-for="item in MENU_ITEMS" class="!m-0">
+                <NavigationMenuItem v-for="item in navItems" class="!m-0">
                   <NavigationMenuLink
                     exact-active-class="!bg-accent/50"
                     :href="item.link"

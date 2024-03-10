@@ -30,4 +30,21 @@ export default {
     not_copied_error: 'Das Passwort konnte nicht kopiert werden.',
     not_generated_error: 'Es wurde noch kein Passwort generiert.',
   },
+  redirectGenerator: {
+    title: 'Weiterleitungs-Generator',
+    description:
+      'Erstellen Sie Weiterleitungen für Ihre URLs und Links. Generieren Sie kurze, benutzerdefinierte URLs, die sich leicht merken und teilen lassen. Mit unserem Weiterleitungs-Generator können Sie lange, komplexe URLs in kurze, benutzerfreundliche Links umwandeln.',
+    seoDescription: 'Erstellen Sie benutzerdefinierte Weiterleitungen für Ihre URLs und Links - schnell und einfach!',
+    tableHead: {
+      from: 'Alte URL',
+      to: 'Neue URL',
+    },
+    form: {
+      placeholder: {
+        from: 'https://www.example.com/alte-url',
+        to: 'https://www.example.com/neue-url',
+      },
+      submit: 'Weiterleitungen erstellen',
+    },
+  },
 };
