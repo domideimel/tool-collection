@@ -34,7 +34,7 @@
     "radix-vue": "^1.4.9",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "vee-validate": "^4.12.4",
+    "vee-validate": "^4.12.6",
     "zod": "^3.22.4"
   }
 }
