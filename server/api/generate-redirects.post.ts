@@ -1,5 +1,5 @@
 import { groupBy, isEmpty, map } from 'lodash-es';
-import { generateRewrites } from '~/lib/url-rewrite';
+import { generateRewrites } from '~/lib/url-rewrite/utils';
 import { Redirect } from '~/types/redirect.model';
 
 export default defineEventHandler(async event => {
