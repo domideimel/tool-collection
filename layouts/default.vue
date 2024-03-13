@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Header from '~/components/general/Header.vue';
 import { Toaster } from '~/components/ui/toast';
-import Update from '~/components/service-worker/update.vue';
 
 const i18nHead = useLocaleHead({
   addSeoAttributes: {
@@ -28,5 +27,4 @@ useHead({
     </div>
   </div>
   <Toaster />
-  <Update />
 </template>
