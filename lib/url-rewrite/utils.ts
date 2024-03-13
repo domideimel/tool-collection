@@ -1,4 +1,12 @@
-export const generateRewrites = (oldUrl: string, newUrl: string, is301: boolean = true): string => {
+export const generateRewrites = ({
+  oldUrl,
+  newUrl,
+  is301 = true,
+}: {
+  oldUrl: string;
+  newUrl: string;
+  is301?: boolean;
+}): string => {
   try {
     const url = new URL(oldUrl);
 
