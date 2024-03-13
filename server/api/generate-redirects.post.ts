@@ -1,5 +1,5 @@
 import { groupBy, isEmpty, map } from 'lodash-es';
-import { generateRewrites } from '~/lib/url-rewrite';
+import { generateRewrites } from '~/lib/url-rewrite/utils';
 import { Redirect } from '~/types/redirect.model';
 
 export default defineEventHandler(async event => {
@@ -17,9 +17,7 @@ export default defineEventHandler(async event => {
     newUrl: group?.find(([key]) => key.startsWith('newUrl_'))?.[1] ?? '',
   }));
 
-  const redirects = groupedData.map(({ oldUrl, newUrl }) => {
-    return generateRewrites(oldUrl, newUrl);
-  });
+  const redirects = groupedData.map(({ oldUrl, newUrl }) => generateRewrites({ oldUrl, newUrl }));
 
   return {
     redirects,
