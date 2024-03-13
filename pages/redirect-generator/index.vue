@@ -45,7 +45,7 @@ const form = useForm({
 });
 
 const onSubmit = form.handleSubmit(async values => {
-  const { redirects } = await $fetch<Record<'redirects', string[]>>('api/generate-redirects', {
+  const { redirects } = await $fetch<Record<'redirects', string[]>>('/api/generate-redirects', {
     method: 'POST',
     body: JSON.stringify(values),
   });
