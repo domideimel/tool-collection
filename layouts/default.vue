@@ -1,25 +1,24 @@
 <script setup lang="ts">
 import Header from '~/components/general/Header.vue';
 import { Toaster } from '~/components/ui/toast';
-import Update from '~/components/service-worker/update.vue'
+import Update from '~/components/service-worker/update.vue';
 
 const i18nHead = useLocaleHead({
   addSeoAttributes: {
-    canonicalQueries: ['foo']
-  }
-})
+    canonicalQueries: ['foo'],
+  },
+});
 
 useHead({
   titleTemplate: titleChunk => {
     return titleChunk ? `${titleChunk} - 'Tool Collection'` : 'Tool Collection';
   },
   htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs!.lang
+    lang: i18nHead.value.htmlAttrs!.lang,
   },
 });
 </script>
 <template>
-  <VitePwaManifest />
   <div class="flex min-h-screen flex-col bg-background">
     <Header />
     <div class="flex-1 bg-background">
