@@ -27,8 +27,8 @@ dependencies:
     specifier: ^4.17.21
     version: 4.17.21
   lucide-vue-next:
-    specifier: ^0.354.0
-    version: 0.354.0(vue@3.4.21)
+    specifier: ^0.358.0
+    version: 0.358.0(vue@3.4.21)
   radix-vue:
     specifier: ^1.4.9
     version: 1.4.9(vue@3.4.21)
@@ -5728,8 +5728,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-vue-next@0.354.0(vue@3.4.21):
-    resolution: {integrity: sha512-FVs/VXBTVSqfLywln5U0MQsB/iBdov5BBa2R9hhOaKzP9XtvuUV1jTctevEL7cgLxHpK9J4RPWSjPbPJzu1EPA==}
+  /lucide-vue-next@0.358.0(vue@3.4.21):
+    resolution: {integrity: sha512-XLC5kLwpcSSv16xrJ1WA6rxt5eyDRGw0EYBUjUBbrynSdspmiGL2z8az79pvli4pto/trcAF/KlxptlF03M2nw==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
@@ -8326,16 +8326,6 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
     dev: true
-
-  /vee-validate@4.12.5(vue@3.4.21):
-    resolution: {integrity: sha512-rvaDfLPSLwTk+mf016XWE4drB8yXzOsKXiKHTb9gNXNLTtQSZ0Ww26O0/xbIFQe+n3+u8Wv1Y8uO/aLDX4fxOg==}
-    peerDependencies:
-      vue: ^3.3.11
-    dependencies:
-      '@vue/devtools-api': 6.5.1
-      type-fest: 4.10.2
-      vue: 3.4.21(typescript@5.3.3)
-    dev: false
 
   /vee-validate@4.12.6(vue@3.4.21):
     resolution: {integrity: sha512-EKM3YHy8t1miPh30d5X6xOrfG/Ctq0nbN4eMpCK7ezvI6T98/S66vswP+ihL4QqAK/k5KqreWOxof09+JG7N/A==}
