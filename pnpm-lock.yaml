@@ -27,8 +27,8 @@ dependencies:
     specifier: ^4.17.21
     version: 4.17.21
   lucide-vue-next:
-    specifier: ^0.365.0
-    version: 0.365.0(vue@3.4.21)
+    specifier: ^0.368.0
+    version: 0.368.0(vue@3.4.21)
   radix-vue:
     specifier: ^1.7.0
     version: 1.7.0(vue@3.4.21)
@@ -3031,7 +3031,7 @@ packages:
       vue: ^2.7.0 || ^3.0.0
     dependencies:
       '@tanstack/virtual-core': 3.2.1
-      vue: 3.4.21(typescript@5.4.4)
+      vue: 3.4.21(typescript@5.4.5)
     dev: false
 
   /@trysound/sax@0.2.0:
@@ -6177,8 +6177,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-vue-next@0.365.0(vue@3.4.21):
-    resolution: {integrity: sha512-gevWR9gNBObHTP8tmdoAGtO7IozkS+FQjTeZ5QpCcrgk3eqwfQlzn9fPyRPQ5Fd31ouq3hvyOqWpuXtTRLsQTQ==}
+  /lucide-vue-next@0.368.0(vue@3.4.21):
+    resolution: {integrity: sha512-ZP5p4ndnPsI858xLFN5Jsz2OrG4e2XPV5T5R7MHOUL4HHg1nHOMWncJBclbX3/1wQP+1AiwqcNARbr0ZoNuGNg==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
