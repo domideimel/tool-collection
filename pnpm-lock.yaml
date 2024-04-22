@@ -42,8 +42,8 @@ dependencies:
     specifier: ^4.12.6
     version: 4.12.6(vue@3.4.21)
   zod:
-    specifier: ^3.22.4
-    version: 3.22.4
+    specifier: ^3.23.0
+    version: 3.23.0
 
 devDependencies:
   '@nuxtjs/i18n':
@@ -3321,7 +3321,7 @@ packages:
     dependencies:
       type-fest: 4.12.0
       vee-validate: 4.12.6(vue@3.4.21)
-      zod: 3.22.4
+      zod: 3.23.0
     transitivePeerDependencies:
       - vue
     dev: false
@@ -9594,6 +9594,6 @@ packages:
       compress-commons: 6.0.2
       readable-stream: 4.5.2
 
-  /zod@3.22.4:
-    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+  /zod@3.23.0:
+    resolution: {integrity: sha512-OFLT+LTocvabn6q76BTwVB0hExEBS0IduTr3cqZyMqEDbOnYmcU+y0tUAYbND4uwclpBGi4I4UUBGzylWpjLGA==}
     dev: false
