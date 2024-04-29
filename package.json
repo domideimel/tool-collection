@@ -30,7 +30,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lodash-es": "^4.17.21",
-    "lucide-vue-next": "^0.372.0",
+    "lucide-vue-next": "^0.376.0",
     "radix-vue": "^1.7.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
