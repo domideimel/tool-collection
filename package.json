@@ -32,7 +32,7 @@
     "lodash-es": "^4.17.21",
     "lucide-vue-next": "^0.372.0",
     "radix-vue": "^1.7.1",
-    "tailwind-merge": "^2.2.2",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "vee-validate": "^4.12.6",
     "zod": "^3.23.0"
