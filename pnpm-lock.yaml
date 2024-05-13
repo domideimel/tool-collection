@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.1.3
     version: 2.1.3(vue@3.4.23)
   '@vee-validate/zod':
-    specifier: ^4.12.6
-    version: 4.12.6(vue@3.4.23)
+    specifier: ^4.12.8
+    version: 4.12.8(vue@3.4.23)
   '@vueuse/core':
     specifier: ^10.9.0
     version: 10.9.0(vue@3.4.23)
@@ -3504,11 +3504,11 @@ packages:
     transitivePeerDependencies:
       - rollup
 
-  /@vee-validate/zod@4.12.6(vue@3.4.23):
-    resolution: {integrity: sha512-LCP/hBWRyOgciwxVYvh4UrowVOJT/v5rJvUKCqEn+4ccx3bNtjVlOI4OvA6T1esg7LvmgseQiNQRxUvE2Pn9ng==}
+  /@vee-validate/zod@4.12.8(vue@3.4.23):
+    resolution: {integrity: sha512-P+G8grCc5iN7FMfvLzVWoGKxamBd0EYgN/hXBmzgbJV7B7FGnQADlUIsqt4jM+oGacbFW12B56zSORaVy3Owqg==}
     dependencies:
       type-fest: 4.12.0
-      vee-validate: 4.12.6(vue@3.4.23)
+      vee-validate: 4.12.8(vue@3.4.23)
       zod: 3.23.8
     transitivePeerDependencies:
       - vue
@@ -9158,6 +9158,16 @@ packages:
     resolution: {integrity: sha512-EKM3YHy8t1miPh30d5X6xOrfG/Ctq0nbN4eMpCK7ezvI6T98/S66vswP+ihL4QqAK/k5KqreWOxof09+JG7N/A==}
     peerDependencies:
       vue: ^3.3.11
+    dependencies:
+      '@vue/devtools-api': 6.6.1
+      type-fest: 4.12.0
+      vue: 3.4.23(typescript@5.4.5)
+    dev: false
+
+  /vee-validate@4.12.8(vue@3.4.23):
+    resolution: {integrity: sha512-A07rm3+y7SRk0CMD/O4nBT0nxtwjyfzGZwjEUDk18SxK0ZMzd4AFCzzdHlIiCE1QgHetxd0I3kVkZdN0GG0Oww==}
+    peerDependencies:
+      vue: ^3.4.26
     dependencies:
       '@vue/devtools-api': 6.6.1
       type-fest: 4.12.0
