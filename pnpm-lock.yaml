@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.378.0
     version: 0.378.0(vue@3.4.23)
   radix-vue:
-    specifier: ^1.7.3
-    version: 1.7.3(vue@3.4.23)
+    specifier: ^1.7.4
+    version: 1.7.4(vue@3.4.23)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -7849,8 +7849,8 @@ packages:
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
 
-  /radix-vue@1.7.3(vue@3.4.23):
-    resolution: {integrity: sha512-GgUagGvpO1EtNvkQ27x3Hv26VrTffZ4XRyx8eMabXRxXtbo2GbjAd2HvGjL9A/D7QVHxw1ZUMBDcYWcpw4LEiQ==}
+  /radix-vue@1.7.4(vue@3.4.23):
+    resolution: {integrity: sha512-Z75iJVb2rNL6347pWwqDIP02ktTowiDKVsScrLRv9y7uj8tMsEcD4pC0oTogVScRP5voZd3rov6zKE20MQTj+A==}
     peerDependencies:
       vue: '>= 3.2.0'
     dependencies:
