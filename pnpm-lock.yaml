@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.378.0
     version: 0.378.0(vue@3.4.27)
   radix-vue:
-    specifier: ^1.7.4
-    version: 1.7.4(vue@3.4.27)
+    specifier: ^1.8.0
+    version: 1.8.0(vue@3.4.27)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -1876,6 +1876,12 @@ packages:
 
   /@internationalized/date@3.5.2:
     resolution: {integrity: sha512-vo1yOMUt2hzp63IutEaTUxROdvQg1qlMRsbCvbay2AK2Gai7wIgCyK5weEX3nHkiLgo4qCXHijFNC/ILhlRpOQ==}
+    dependencies:
+      '@swc/helpers': 0.5.7
+    dev: false
+
+  /@internationalized/number@3.5.2:
+    resolution: {integrity: sha512-4FGHTi0rOEX1giSkt5MH4/te0eHBq3cvAYsfLlpguV6pzJAReXymiYpE5wPCqKqjkUO3PIsyvk+tBiIV1pZtbA==}
     dependencies:
       '@swc/helpers': 0.5.7
     dev: false
@@ -7737,14 +7743,15 @@ packages:
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
 
-  /radix-vue@1.7.4(vue@3.4.27):
-    resolution: {integrity: sha512-Z75iJVb2rNL6347pWwqDIP02ktTowiDKVsScrLRv9y7uj8tMsEcD4pC0oTogVScRP5voZd3rov6zKE20MQTj+A==}
+  /radix-vue@1.8.0(vue@3.4.27):
+    resolution: {integrity: sha512-RT98WcrsHMG4P4DuN4G4EeHnSV2Lk+J2k2LWr/UF/7oF2STxUFEjg2Zg0uxFG8B/evutOmp9S5kqujJVmp3sgQ==}
     peerDependencies:
       vue: '>= 3.2.0'
     dependencies:
       '@floating-ui/dom': 1.6.3
       '@floating-ui/vue': 1.0.6(vue@3.4.27)
       '@internationalized/date': 3.5.2
+      '@internationalized/number': 3.5.2
       '@tanstack/vue-virtual': 3.2.1(vue@3.4.27)
       '@vueuse/core': 10.9.0(vue@3.4.27)
       '@vueuse/shared': 10.9.0(vue@3.4.27)
