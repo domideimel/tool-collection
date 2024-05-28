@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.379.0
     version: 0.379.0(vue@3.4.27)
   radix-vue:
-    specifier: ^1.8.0
-    version: 1.8.0(vue@3.4.27)
+    specifier: ^1.8.2
+    version: 1.8.2(vue@3.4.27)
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -1829,8 +1829,8 @@ packages:
     dependencies:
       '@floating-ui/core': 1.6.1
 
-  /@floating-ui/dom@1.6.3:
-    resolution: {integrity: sha512-RnDthu3mzPlQ31Ss/BTwQ1zjzIhr3lk1gZB1OC56h/1vEtaXkESrOqL5fQVMfXpwGtRwX+YsZBdyHtJMQnkArw==}
+  /@floating-ui/dom@1.6.5:
+    resolution: {integrity: sha512-Nsdud2X65Dz+1RHjAIP0t8z5e2ff/IRbei6BqFrl1urT8sDVzM1HMQ+R0XcU5ceRfyO3I6ayeqIfh+6Wb8LGTw==}
     dependencies:
       '@floating-ui/core': 1.6.1
       '@floating-ui/utils': 0.2.2
@@ -1842,7 +1842,7 @@ packages:
   /@floating-ui/vue@1.0.6(vue@3.4.27):
     resolution: {integrity: sha512-EdrOljjkpkkqZnrpqUcPoz9NvHxuTjUtSInh6GMv3+Mcy+giY2cE2pHh9rpacRcZ2eMSCxel9jWkWXTjLmY55w==}
     dependencies:
-      '@floating-ui/dom': 1.6.3
+      '@floating-ui/dom': 1.6.5
       '@floating-ui/utils': 0.2.2
       vue-demi: 0.14.7(vue@3.4.27)
     transitivePeerDependencies:
@@ -1874,14 +1874,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@internationalized/date@3.5.2:
-    resolution: {integrity: sha512-vo1yOMUt2hzp63IutEaTUxROdvQg1qlMRsbCvbay2AK2Gai7wIgCyK5weEX3nHkiLgo4qCXHijFNC/ILhlRpOQ==}
+  /@internationalized/date@3.5.4:
+    resolution: {integrity: sha512-qoVJVro+O0rBaw+8HPjUB1iH8Ihf8oziEnqMnvhJUSuVIrHOuZ6eNLHNvzXJKUvAtaDiqMnRlg8Z2mgh09BlUw==}
     dependencies:
       '@swc/helpers': 0.5.7
     dev: false
 
-  /@internationalized/number@3.5.2:
-    resolution: {integrity: sha512-4FGHTi0rOEX1giSkt5MH4/te0eHBq3cvAYsfLlpguV6pzJAReXymiYpE5wPCqKqjkUO3PIsyvk+tBiIV1pZtbA==}
+  /@internationalized/number@3.5.3:
+    resolution: {integrity: sha512-rd1wA3ebzlp0Mehj5YTuTI50AQEx80gWFyHcQu+u91/5NgdwBecO8BH6ipPfE+lmQ9d63vpB3H9SHoIUiupllw==}
     dependencies:
       '@swc/helpers': 0.5.7
     dev: false
@@ -3205,16 +3205,16 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@tanstack/virtual-core@3.2.1:
-    resolution: {integrity: sha512-nO0d4vRzsmpBQCJYyClNHPPoUMI4nXNfrm6IcCRL33ncWMoNVpURh9YebEHPw8KrtsP2VSJIHE4gf4XFGk1OGg==}
+  /@tanstack/virtual-core@3.5.0:
+    resolution: {integrity: sha512-KnPRCkQTyqhanNC0K63GBG3wA8I+D1fQuVnAvcBF8f13akOKeQp1gSbu6f77zCxhEk727iV5oQnbHLYzHrECLg==}
     dev: false
 
-  /@tanstack/vue-virtual@3.2.1(vue@3.4.27):
-    resolution: {integrity: sha512-NWJL8zJ4kwCkUzWd2jLKN9NTxj9RjYyaJwtA16j9urfbnMIdKe2g2HNymq0jGj+fmX/9nd58d6h78LrZ7I/J+A==}
+  /@tanstack/vue-virtual@3.5.0(vue@3.4.27):
+    resolution: {integrity: sha512-wvRQ8sFxn/NDr3WvI5XabhFovZ5MBmpEck2GHpTxYunmV63Ovpl30lRu6W5BPQo35a1GqDZ+Pvzlz6WDWRNqqw==}
     peerDependencies:
       vue: ^2.7.0 || ^3.0.0
     dependencies:
-      '@tanstack/virtual-core': 3.2.1
+      '@tanstack/virtual-core': 3.5.0
       vue: 3.4.27(typescript@5.4.5)
     dev: false
 
@@ -7743,16 +7743,16 @@ packages:
   /queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
 
-  /radix-vue@1.8.0(vue@3.4.27):
-    resolution: {integrity: sha512-RT98WcrsHMG4P4DuN4G4EeHnSV2Lk+J2k2LWr/UF/7oF2STxUFEjg2Zg0uxFG8B/evutOmp9S5kqujJVmp3sgQ==}
+  /radix-vue@1.8.2(vue@3.4.27):
+    resolution: {integrity: sha512-ey6jG1rPAD/521PsXGrNkjztvh7PRw6Wwbk7LsHjsKqRoy/S4k58ryzmQ0tmoNOiUALfX92+MOnd5F3ONmuZ/w==}
     peerDependencies:
       vue: '>= 3.2.0'
     dependencies:
-      '@floating-ui/dom': 1.6.3
+      '@floating-ui/dom': 1.6.5
       '@floating-ui/vue': 1.0.6(vue@3.4.27)
-      '@internationalized/date': 3.5.2
-      '@internationalized/number': 3.5.2
-      '@tanstack/vue-virtual': 3.2.1(vue@3.4.27)
+      '@internationalized/date': 3.5.4
+      '@internationalized/number': 3.5.3
+      '@tanstack/vue-virtual': 3.5.0(vue@3.4.27)
       '@vueuse/core': 10.9.0(vue@3.4.27)
       '@vueuse/shared': 10.9.0(vue@3.4.27)
       aria-hidden: 1.2.4
