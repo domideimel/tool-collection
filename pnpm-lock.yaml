@@ -62,11 +62,11 @@ devDependencies:
     specifier: ^3.11.2
     version: 3.11.2(@unocss/reset@0.59.4)(floating-vue@5.2.2)(rollup@4.17.2)(typescript@5.4.5)(unocss@0.59.4)(vite@5.2.11)
   prettier:
-    specifier: ^3.2.5
-    version: 3.2.5
+    specifier: ^3.3.0
+    version: 3.3.0
   prettier-plugin-tailwindcss:
     specifier: ^0.6.1
-    version: 0.6.1(prettier@3.2.5)
+    version: 0.6.1(prettier@3.3.0)
   shadcn-nuxt:
     specifier: ^0.10.4
     version: 0.10.4(rollup@4.17.2)
@@ -7596,7 +7596,7 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
-  /prettier-plugin-tailwindcss@0.6.1(prettier@3.2.5):
+  /prettier-plugin-tailwindcss@0.6.1(prettier@3.3.0):
     resolution: {integrity: sha512-AnbeYZu0WGj+QgKciUgdMnRxrqcxltleZPgdwfA5104BHM3siBLONN/HLW1yS2HvzSNkzpQ/JAj+LN0jcJO+0w==}
     engines: {node: '>=14.21.3'}
     peerDependencies:
@@ -7648,11 +7648,11 @@ packages:
       prettier-plugin-svelte:
         optional: true
     dependencies:
-      prettier: 3.2.5
+      prettier: 3.3.0
     dev: true
 
-  /prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  /prettier@3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
