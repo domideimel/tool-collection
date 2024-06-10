@@ -16,7 +16,7 @@
     "@vite-pwa/nuxt": "^0.8.0",
     "nuxt": "^3.11.2",
     "prettier": "^3.3.1",
-    "prettier-plugin-tailwindcss": "^0.6.1",
+    "prettier-plugin-tailwindcss": "^0.6.2",
     "shadcn-nuxt": "^0.10.4",
     "typescript": "^5.4.5",
     "vue": "^3.4.27",
