@@ -27,8 +27,8 @@ dependencies:
     specifier: ^4.17.21
     version: 4.17.21
   lucide-vue-next:
-    specifier: ^0.383.0
-    version: 0.383.0(vue@3.4.27)
+    specifier: ^0.395.0
+    version: 0.395.0(vue@3.4.27)
   radix-vue:
     specifier: ^1.8.3
     version: 1.8.3(vue@3.4.27)
@@ -6326,8 +6326,8 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /lucide-vue-next@0.383.0(vue@3.4.27):
-    resolution: {integrity: sha512-paQmd2cHAye7Zl/lA0avZN2efZxFkMehfoori1BiHKX//KQG4DVuy00yl4YHVQ6h1B4EsR+QDRCpVUtwvKUBRw==}
+  /lucide-vue-next@0.395.0(vue@3.4.27):
+    resolution: {integrity: sha512-5EwqFxv6Uwi7JgQ48G8yrsFOPe6erPkjgUX7uKDbO1+B5j11duYxILpvD1ZmjmaleiK+5mOk45bv11KLYM0Ewg==}
     peerDependencies:
       vue: '>=3.0.1'
     dependencies:
