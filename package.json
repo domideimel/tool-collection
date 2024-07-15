@@ -15,7 +15,7 @@
     "@types/lodash-es": "^4.17.12",
     "@vite-pwa/nuxt": "^0.9.1",
     "nuxt": "^3.12.3",
-    "prettier": "^3.3.2",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "shadcn-nuxt": "^0.10.4",
     "typescript": "^5.5.3",
