@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@heroicons/vue':
-        specifier: ^2.1.4
-        version: 2.1.4(vue@3.4.29(typescript@5.5.3))
+        specifier: ^2.1.5
+        version: 2.1.5(vue@3.4.29(typescript@5.5.3))
       '@vee-validate/zod':
         specifier: ^4.13.2
         version: 4.13.2(vue@3.4.29(typescript@5.5.3))
@@ -1172,8 +1172,8 @@ packages:
   '@floating-ui/vue@1.1.1':
     resolution: {integrity: sha512-cyawjk9etPZPl/RVtMRnWrwtAhWbPVSrRVYARgOzhLIqxr0k2up1APrrFjqP9QwRQ0AwjKSvbWg4YC6jESutow==}
 
-  '@heroicons/vue@2.1.4':
-    resolution: {integrity: sha512-wykVSZ/fqEG49lIeHgFGT9TCvBw9THuRTtA/sPp7FVk3iBob/HcmitMcLDwtXOW82TXb38HeLRl1/pcElPeSdg==}
+  '@heroicons/vue@2.1.5':
+    resolution: {integrity: sha512-IpqR72sFqFs55kyKfFS7tN+Ww6odFNeH/7UxycIOrlVYfj4WUGAdzQtLBnJspucSeqWFQsKM0g0YrgU655BEfA==}
     peerDependencies:
       vue: '>= 3'
 
@@ -4740,11 +4740,6 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vee-validate@4.13.1:
-    resolution: {integrity: sha512-JAlUWTBHg0z66n+v66mrtE9IC1xmVCggzpyc7UXCNkizVok8Zgt1VAVjobSxA/0N19Zn6v6hRfjoYciYH/Z11Q==}
-    peerDependencies:
-      vue: ^3.4.26
-
   vee-validate@4.13.2:
     resolution: {integrity: sha512-HlpR/6MJ92TW9f135umMZKUqdd/tFQTxLNSf2ImbU4Y/MlLVAUpF1l64VdjTOhbClAqPjCb5p/SqHDxLpUHXrw==}
     peerDependencies:
@@ -6145,7 +6140,7 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@heroicons/vue@2.1.4(vue@3.4.29(typescript@5.5.3))':
+  '@heroicons/vue@2.1.5(vue@3.4.29(typescript@5.5.3))':
     dependencies:
       vue: 3.4.29(typescript@5.5.3)
 
@@ -10456,12 +10451,6 @@ snapshots:
   util-deprecate@1.0.2: {}
 
   vary@1.1.2: {}
-
-  vee-validate@4.13.1(vue@3.4.29(typescript@5.5.3)):
-    dependencies:
-      '@vue/devtools-api': 6.6.1
-      type-fest: 4.12.0
-      vue: 3.4.29(typescript@5.5.3)
 
   vee-validate@4.13.2(vue@3.4.29(typescript@5.5.3)):
     dependencies:
