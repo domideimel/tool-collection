@@ -19,7 +19,7 @@
     "prettier-plugin-tailwindcss": "^0.6.5",
     "shadcn-nuxt": "^0.10.4",
     "typescript": "^5.5.3",
-    "vue": "^3.4.33",
+    "vue": "^3.4.34",
     "vue-router": "^4.4.0"
   },
   "dependencies": {
