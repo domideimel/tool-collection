@@ -33,8 +33,8 @@ importers:
         specifier: ^0.428.0
         version: 0.428.0(vue@3.4.35(typescript@5.5.4))
       radix-vue:
-        specifier: ^1.9.3
-        version: 1.9.3(vue@3.4.35(typescript@5.5.4))
+        specifier: ^1.9.4
+        version: 1.9.4(vue@3.4.35(typescript@5.5.4))
       tailwind-merge:
         specifier: ^2.5.2
         version: 2.5.2
@@ -3942,8 +3942,8 @@ packages:
   queue-tick@1.0.1:
     resolution: {integrity: sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag==}
 
-  radix-vue@1.9.3:
-    resolution: {integrity: sha512-9pewcgzghM+B+FO1h9mMsZa/csVH6hElpN1sqmG4/qoeieiDG0i4nhMjS7p2UOz11EEdVm7eLandHSPyx7hYhg==}
+  radix-vue@1.9.4:
+    resolution: {integrity: sha512-d950wxB+MVVU6L9h39OsNzAdk2BiGDDfhXJiHsksPAIK5pCR8W4U0RB0WLQEdjmmL9p1aXOYm4FBDq0oIo2G/w==}
     peerDependencies:
       vue: '>= 3.2.0'
 
@@ -6013,7 +6013,7 @@ snapshots:
     dependencies:
       '@floating-ui/dom': 1.6.7
       '@floating-ui/utils': 0.2.4
-      vue-demi: 0.14.8(vue@3.4.35(typescript@5.5.4))
+      vue-demi: 0.14.10(vue@3.4.35(typescript@5.5.4))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7171,7 +7171,7 @@ snapshots:
 
   '@vueuse/shared@10.11.0(vue@3.4.35(typescript@5.5.4))':
     dependencies:
-      vue-demi: 0.14.8(vue@3.4.35(typescript@5.5.4))
+      vue-demi: 0.14.10(vue@3.4.35(typescript@5.5.4))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -9425,7 +9425,7 @@ snapshots:
 
   queue-tick@1.0.1: {}
 
-  radix-vue@1.9.3(vue@3.4.35(typescript@5.5.4)):
+  radix-vue@1.9.4(vue@3.4.35(typescript@5.5.4)):
     dependencies:
       '@floating-ui/dom': 1.6.7
       '@floating-ui/vue': 1.1.1(vue@3.4.35(typescript@5.5.4))
