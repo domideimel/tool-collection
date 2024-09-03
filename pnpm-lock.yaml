@@ -15,8 +15,8 @@ importers:
         specifier: ^4.13.2
         version: 4.13.2(vue@3.4.38(typescript@5.5.4))
       '@vueuse/core':
-        specifier: ^10.11.0
-        version: 10.11.0(vue@3.4.38(typescript@5.5.4))
+        specifier: ^11.0.3
+        version: 11.0.3(vue@3.4.38(typescript@5.5.4))
       '@vueuse/nuxt':
         specifier: ^11.0.3
         version: 11.0.3(magicast@0.3.4)(nuxt@3.13.0(@parcel/watcher@2.4.1)(@types/node@20.12.4)(encoding@0.1.13)(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.1)(terser@5.30.3)(typescript@5.5.4)(vite@5.4.2(@types/node@20.12.4)(terser@5.30.3)))(rollup@4.18.1)(vue@3.4.38(typescript@5.5.4))
@@ -4896,17 +4896,6 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-demi@0.14.8:
-    resolution: {integrity: sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==}
-    engines: {node: '>=12'}
-    hasBin: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-
   vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
 
@@ -5148,7 +5137,7 @@ snapshots:
   '@babel/helper-builder-binary-assignment-operator-visitor@7.24.7':
     dependencies:
       '@babel/traverse': 7.24.7
-      '@babel/types': 7.24.7
+      '@babel/types': 7.25.4
     transitivePeerDependencies:
       - supports-color
 
@@ -5187,7 +5176,7 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/helper-compilation-targets': 7.24.7
       '@babel/helper-plugin-utils': 7.24.7
-      debug: 4.3.5
+      debug: 4.3.6
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -5290,7 +5279,7 @@ snapshots:
       '@babel/helper-function-name': 7.24.7
       '@babel/template': 7.24.7
       '@babel/traverse': 7.24.7
-      '@babel/types': 7.24.7
+      '@babel/types': 7.25.4
     transitivePeerDependencies:
       - supports-color
 
@@ -5883,7 +5872,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.24.7
-      '@babel/types': 7.24.7
+      '@babel/types': 7.25.4
       esutils: 2.0.3
 
   '@babel/regjsgen@0.8.0': {}
@@ -7275,7 +7264,7 @@ snapshots:
       '@types/web-bluetooth': 0.0.20
       '@vueuse/metadata': 10.11.0
       '@vueuse/shared': 10.11.0(vue@3.4.38(typescript@5.5.4))
-      vue-demi: 0.14.8(vue@3.4.38(typescript@5.5.4))
+      vue-demi: 0.14.10(vue@3.4.38(typescript@5.5.4))
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -7739,7 +7728,7 @@ snapshots:
 
   core-js-compat@3.37.1:
     dependencies:
-      browserslist: 4.23.1
+      browserslist: 4.23.3
 
   core-util-is@1.0.3: {}
 
@@ -10592,10 +10581,6 @@ snapshots:
       ufo: 1.5.4
 
   vue-demi@0.14.10(vue@3.4.38(typescript@5.5.4)):
-    dependencies:
-      vue: 3.4.38(typescript@5.5.4)
-
-  vue-demi@0.14.8(vue@3.4.38(typescript@5.5.4)):
     dependencies:
       vue: 3.4.38(typescript@5.5.4)
 
