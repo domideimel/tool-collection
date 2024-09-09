@@ -13,7 +13,7 @@
     "@nuxtjs/i18n": "^8.5.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@types/lodash-es": "^4.17.12",
-    "@vite-pwa/nuxt": "^0.10.1",
+    "@vite-pwa/nuxt": "^0.10.5",
     "nuxt": "^3.13.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
